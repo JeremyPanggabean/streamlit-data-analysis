@@ -25,7 +25,7 @@ def main():
         all_df = load_data()
         st.success("Data loaded successfully!")
     except FileNotFoundError:
-        st.error("Please ensure 'all_dataset.csv' is in the same directory as this script.")
+        st.error("Please ensure 'all_data.csv' is in the same directory as this script.")
         return
 
 
