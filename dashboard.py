@@ -12,7 +12,7 @@ st.set_page_config(
 # Function to load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv("all_data.csv")
+    df = pd.read_csv("all_dataset.csv")
     df['order_purchase_timestamp'] = pd.to_datetime(df['order_purchase_timestamp'])
     return df
 
@@ -25,7 +25,7 @@ def main():
         all_df = load_data()
         st.success("Data loaded successfully!")
     except FileNotFoundError:
-        st.error("Please ensure 'all_data.csv' is in the same directory as this script.")
+        st.error("Please ensure 'all_dataset.csv' is in the same directory as this script.")
         return
 
 
